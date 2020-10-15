@@ -1,12 +1,12 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'sbz-intro',
-  templateUrl: './intro.component.html',
-  styleUrls: ['./intro.component.scss'],
+  selector: 'sbz-contact',
+  templateUrl: './contact.component.html',
+  styleUrls: ['./contact.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class IntroComponent implements OnInit {
+export class ContactComponent implements OnInit {
 
   constructor() {
   }
