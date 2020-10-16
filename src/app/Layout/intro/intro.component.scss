@@ -22,6 +22,38 @@
       display: flex;
       align-items: center;
 
+      &.facebook {
+        a {
+          :hover {
+            color: #0E8EF2 !important;
+          }
+        }
+      }
+
+      &.github {
+        a {
+          :hover {
+            color: #24292E !important;
+          }
+        }
+      }
+
+      &.linkedin {
+        a {
+          :hover {
+            color: #0077B5 !important;
+          }
+        }
+      }
+
+      &.stack {
+        a {
+          :hover {
+            color: #F28D3D !important;
+          }
+        }
+      }
+
       a {
         display: inline-block;
         text-decoration: none;
@@ -32,7 +64,6 @@
 
         :hover {
           // TODO: change to social icons real colors
-          color: #0E8EF2;
           -webkit-transition: all 300ms;
           -moz-transition: all 300ms;
           -o-transition: all 300ms;
@@ -78,3 +109,5 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
   transform: translateY(-2px);
 }
+
+
