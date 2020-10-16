@@ -1,0 +1,91 @@
+:host {
+  background: blue
+}
+
+.wrapper {
+  width: 500px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 6rem;
+  position: relative;
+  color: transparent;
+  margin-bottom: 0;
+}
+
+h1:before {
+  content: "Shatter";
+  position: absolute;
+  top: 0px;
+  left: 22px;
+  color: red;
+  -webkit-clip-path: inset(0px 298px 0px 0px);
+  clip-path: inset(0px 298px 0px 0px);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+h1 span:before {
+  content: "Shatter";
+  position: absolute;
+  top: 0px;
+  left: 22px;
+  color: red;
+  -webkit-clip-path: inset(0px 200px 0px 154px);
+  clip-path: inset(0px 200px 0px 154px);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+h1:after {
+  content: "Shatter";
+  position: absolute;
+  right: 24px;
+  top: 0px;
+  color: red;
+  -webkit-clip-path: inset(0px 100px 0px 250px);
+  clip-path: inset(0px 100px 0px 250px);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+h1 span:after {
+  content: "Shatter";
+  position: absolute;
+  right: 24px;
+  top: 0px;
+  color: red;
+  -webkit-clip-path: inset(0px 0px 0px 353px);
+  clip-path: inset(0px 0px 0px 353px);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+h1:hover:after {
+  top: 10px;
+  cursor: pointer;
+  color: rgba(138, 32, 32, 0.6);
+}
+
+h1:hover:before {
+  top: -10px;
+  left: 0px;
+  cursor: pointer;
+  color: rgba(138, 32, 32, 0.6);
+}
+
+h1:hover span:before {
+  top: 4px;
+  cursor: pointer;
+}
+
+h1:hover span:after {
+  top: -8px;
+  left: 30px;
+  cursor: pointer;
+}
