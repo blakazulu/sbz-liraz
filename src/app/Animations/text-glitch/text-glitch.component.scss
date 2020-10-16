@@ -7,14 +7,13 @@ $glitch-bg-color: transparent;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   height: 100%;
   width: 100%;
 }
 
 span {
   font-family: 'Indie Flower', cursive;
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 .glitch {
@@ -189,22 +188,23 @@ span {
   }
 }
 
-h1 {
-  position: absolute;
-  width: 100%;
+p {
+  position: relative;
+  max-width: 50ch;
   height: 50%;
-  font-size: 45px;
+  font-family: 'Indie Flower', cursive;
+  font-size: 2em;
 }
 
-h1:after {
+p:after {
   position: absolute;
   content: "";
   width: 100%;
   height: 100%;
   line-height: 48px;
-  left: 30%;
-  top: 50%;
-  animation: abomination1 7.5s infinite;
+  left: 0;
+  top: 0;
+  animation: abomination1 10s infinite;
   animation-fill-mode: forwards;
 }
 
@@ -273,16 +273,124 @@ h1:after {
   40% {
     content: "Developer... And e";
   }
+  42% {
+    content: "Developer... And ev";
+  }
+  44% {
+    content: "Developer... And evi";
+  }
+  46% {
+    content: "Developer... And ev";
+  }
+  48% {
+    content: "Developer... And eve";
+  }
+  50% {
+    content: "Developer... And every";
+  }
+  52% {
+    content: "Developer... And everyt";
+  }
+  54% {
+    content: "Developer... And everythi";
+  }
+  56% {
+    content: "Developer... And everythin";
+  }
+  58% {
+    content: "Developer... And everything";
+  }
+  60% {
+    content: "Developer... And everything ";
+  }
+  62% {
+    content: "Developer... And everything T";
+  }
+  64% {
+    content: "Developer... And everything ";
+  }
+  68% {
+    content: "Developer... And everything t";
+  }
+  70% {
+    content: "Developer... And everything th";
+  }
+  72% {
+    content: "Developer... And everything tha";
+  }
+  74% {
+    content: "Developer... And everything that";
+  }
+  76% {
+    content: "Developer... And everything that ";
+  }
+  77% {
+    content: "Developer... And everything that c";
+  }
+  78% {
+    content: "Developer... And everything that co";
+  }
+  79% {
+    content: "Developer... And everything that com";
+  }
+  89% {
+    content: "Developer... And everything that come";
+  }
+  81% {
+    content: "Developer... And everything that comes";
+  }
+  82% {
+    content: "Developer... And everything that comes ";
+  }
+  83% {
+    content: "Developer... And everything that comes w";
+  }
   84% {
-    content: "Developer... And everything that comes with it :)";
+    content: "Developer... And everything that comes wi";
+  }
+  85% {
+    content: "Developer... And everything that comes wit";
+  }
+  86% {
+    content: "Developer... And everything that comes with";
+  }
+  87% {
+    content: "Developer... And everything that comes with ";
   }
   88% {
-    content: "Developer... And everything that comes with it :)";
+    content: "Developer... And everything that comes with i";
+  }
+  89% {
+    content: "Developer... And everything that comes with it";
+  }
+  90% {
+    content: "Developer... And everything that comes with it ";
+  }
+  91% {
+    content: "Developer... And everything that comes with it :";
   }
   92% {
     content: "Developer... And everything that comes with it :)";
   }
+  93% {
+    content: "Developer... And everything that comes with it :)";
+  }
+  94% {
+    content: "Developer... And everything that comes with it :)";
+  }
+  95% {
+    content: "Developer... And everything that comes with it :)";
+  }
   96% {
+    content: "Developer... And everything that comes with it :)";
+  }
+  97% {
+    content: "Developer... And everything that comes with it :)";
+  }
+  98% {
+    content: "Developer... And everything that comes with it :)";
+  }
+  99% {
     content: "Developer... And everything that comes with it :)";
   }
   100% {
@@ -297,5 +405,12 @@ h1:after {
     span {
       margin-right: 8px;
     }
+  }
+  span {
+    font-size: 1.5em;
+  }
+  p {
+    font-size: 3em;
+    max-width: 100%;
   }
 }
