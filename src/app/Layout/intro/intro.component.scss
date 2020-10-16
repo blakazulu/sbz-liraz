@@ -5,7 +5,6 @@
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
-
   &__title {
     font-family: 'Source Code Pro', monospace;
     text-align: center;
@@ -79,10 +78,6 @@
           font-size: 18px;
           margin: 0 7px;
           line-height: 40px;
-          text-align: center;
-          width: 40px;
-          height: 40px;
-
         }
 
         ::after {
@@ -113,41 +108,77 @@
   transform: translateY(-2px);
 }
 
+.typewriter-container {
+  display: flex;
+  justify-content: center;
 
-.terminal {
-  position: relative;
-  width: 100%;
-  border-radius: 6px;
-  padding-top: 45px;
-  margin-top: 100px;
-  overflow: hidden;
-  background-color: rgb(15, 15, 16);
+  .typewriter {
+    position: relative;
+    //width: 100%;
+    border-radius: 6px;
+    margin-top: 100px;
+    overflow: hidden;
+    background-color: rgb(15, 15, 16);
+    padding: 45px 16px 0 16px;
+
+    ::before {
+      content: "\2022 \2022 \2022";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 4px;
+      background: rgb(58, 58, 58);
+      color: #c2c3c4;
+      width: 100%;
+      font-size: 2rem;
+      line-height: 0;
+      padding: 14px 0;
+      text-indent: 4px;
+    }
+
+    h5 {
+      text-align: center;
+      color: #3f3;
+      font-family: 'VT323', monospace, sans-serif;
+      overflow: hidden; /* Ensures the content is not revealed until the animation */
+      border-right: .15em solid orange; /* The typewriter cursor */
+      white-space: nowrap; /* Keeps the content on a single line */
+      margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+      letter-spacing: .15em; /* Adjust as needed */
+      animation: typing 3.5s steps(30, end),
+      blink-caret 1s step-end infinite;
+    }
+  }
 }
 
-.terminal::before {
-  content: "\2022 \2022 \2022";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 4px;
-  background: rgb(58, 58, 58);
-  color: #c2c3c4;
-  width: 100%;
-  font-size: 2rem;
-  line-height: 0;
-  padding: 14px 0;
-  text-indent: 4px;
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0
+  }
+  to {
+    width: 100%
+  }
 }
 
-.terminal span {
-  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
-  color: white;
-  padding: 0 1rem 1rem;
-  margin: 0;
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to {
+    border-width: 5px;
+    border-color: transparent
+  }
+  50% {
+    border-width: 5px;
+    border-color: #3f3;
+  }
 }
 
 @media (min-width: 900px) {
   .container {
     width: auto;
+  }
+
+  .typewriter-container {
+    font-size: 1.5em;
   }
 }
