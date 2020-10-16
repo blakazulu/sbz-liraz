@@ -1,13 +1,12 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'sbz-intro',
-  templateUrl: './intro.component.html',
-  styleUrls: ['./intro.component.scss'],
+  selector: 'sbz-text-glitch',
+  templateUrl: './text-glitch.component.html',
+  styleUrls: ['./text-glitch.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class IntroComponent implements OnInit {
-
+export class TextGlitchComponent implements OnInit {
   constructor() {
   }
 
