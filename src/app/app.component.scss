@@ -1,5 +1,5 @@
 .page {
-  height: 100vh;
+  height: 60vh;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -15,4 +15,11 @@
 
 .blue {
   background: #c9c9ee;
+}
+
+
+@media (min-width: 900px) {
+  .page {
+    height: 100vh;
+  }
 }

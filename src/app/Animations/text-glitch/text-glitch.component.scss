@@ -1,49 +1,20 @@
 @import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
 
-$glitch-bg-color: #ffffff;
-
-/* unvisited link */
-a:link {
-  color: #FFF;
-  text-decoration: none;
-}
-
-/* visited link */
-a:visited {
-  color: #FFF;
-  text-decoration: none;
-}
-
-/* mouse over link */
-a:hover {
-  color: #FF00F0;
-  text-decoration: none;
-}
-
-/* selected link */
-a:active {
-  color: #efdb76;
-  text-decoration: none;
-}
+$glitch-bg-color: transparent;
 
 .center {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   height: 100%;
   width: 100%;
 }
 
-h1 {
-  display: block;
-  font-size: 1.5em;
-  margin: 0;
-  font-weight: bold;
-}
-
 span {
   font-family: 'Indie Flower', cursive;
+  font-size: 1.5em;
 }
 
 .glitch {
@@ -67,7 +38,7 @@ span {
 .glitch::after {
   animation-name: glitch-animation;
   animation-duration: 4s;
-  left: 4px;
+  left: 0;
   text-shadow: -1px 0 #ffa800;
   background: $glitch-bg-color;
 }
@@ -75,7 +46,7 @@ span {
 .glitch::before {
   animation-name: glitch-animation-2;
   animation-duration: 6s;
-  left: -4px;
+  left: 0;
   text-shadow: 1px 0 #2fff00;
   background: $glitch-bg-color;
 }
@@ -83,6 +54,7 @@ span {
 @mixin rect($top, $bottom) {
   clip: rect($top, 9999px, $bottom, 0);
 }
+
 
 /* Expanded Animations */
 @keyframes glitch-animation {
@@ -217,184 +189,113 @@ span {
   }
 }
 
-.wrapper {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.wrapper h1.glitch-two {
-  color: black;
-  font-family: "Indie Flower", cursive;
-  position: relative;
-  font-size: 16px;
-  padding: 30px;
-  text-align: center;
-}
-
-.wrapper h1.glitch-two::before, .wrapper h1.glitch-two::after {
-  padding: 30px;
-  color: black;
-  content: "Developer... And everything that comes with it";
+h1 {
   position: absolute;
   width: 100%;
+  height: 50%;
+  font-size: 45px;
+}
+
+h1:after {
+  position: absolute;
+  content: "";
+  width: 100%;
   height: 100%;
-  overflow: hidden;
-  top: 0;
+  line-height: 48px;
+  left: 30%;
+  top: 50%;
+  animation: abomination1 7.5s infinite;
+  animation-fill-mode: forwards;
 }
 
-.wrapper h1.glitch-two::before {
-  left: 3px;
-  text-shadow: -2px 0 red;
-  animation-name: glitch-animation-1;
-  animation-duration: 4s;
-  animation-timing-function: linear;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
-  animation-direction: reverse-alternate;
-}
-
-.wrapper h1.glitch-two::after {
-  left: -3px;
-  text-shadow: -2px 0 blue;
-  animation-name: glitch-animation-2;
-  animation-duration: 4s;
-  animation-timing-function: linear;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
-  animation-direction: reverse-alternate;
-}
-
-@keyframes glitch-animation-1 {
+//Developer... And everything that comes with it :)
+@keyframes abomination1 {
   0% {
-    clip: rect(89px, 350px, 24px, 30px);
+    content: "D";
   }
-  5% {
-    clip: rect(12px, 350px, 121px, 30px);
+  2% {
+    content: "De";
+  }
+  4% {
+    content: "Deve";
+  }
+  6% {
+    content: "Devel";
+  }
+  8% {
+    content: "Develo";
   }
   10% {
-    clip: rect(78px, 350px, 78px, 30px);
+    content: "Develop";
   }
-  15% {
-    clip: rect(32px, 350px, 48px, 30px);
+  12% {
+    content: "Develope";
+  }
+  14% {
+    content: "Developer";
+  }
+  16% {
+    content: "Developer.";
+  }
+  18% {
+    content: "Developer..";
   }
   20% {
-    clip: rect(114px, 350px, 4px, 30px);
+    content: "Developer..4";
   }
-  25% {
-    clip: rect(13px, 350px, 100px, 30px);
+  22% {
+    content: "Developer..";
+  }
+  24% {
+    content: "Developer...";
+  }
+  26% {
+    content: "Developer... ";
+  }
+  28% {
+    content: "Developer... a";
   }
   30% {
-    clip: rect(40px, 350px, 11px, 30px);
+    content: "Developer... ";
   }
-  35% {
-    clip: rect(138px, 350px, 139px, 30px);
+  32% {
+    content: "Developer... A";
+  }
+  34% {
+    content: "Developer... An";
+  }
+  36% {
+    content: "Developer... And";
+  }
+  38% {
+    content: "Developer... And ";
   }
   40% {
-    clip: rect(46px, 350px, 37px, 30px);
+    content: "Developer... And e";
   }
-  45% {
-    clip: rect(118px, 350px, 8px, 30px);
+  84% {
+    content: "Developer... And everything that comes with it :)";
   }
-  50% {
-    clip: rect(39px, 350px, 59px, 30px);
+  88% {
+    content: "Developer... And everything that comes with it :)";
   }
-  55% {
-    clip: rect(137px, 350px, 87px, 30px);
+  92% {
+    content: "Developer... And everything that comes with it :)";
   }
-  60% {
-    clip: rect(50px, 350px, 1px, 30px);
-  }
-  65% {
-    clip: rect(138px, 350px, 108px, 30px);
-  }
-  70% {
-    clip: rect(137px, 350px, 140px, 30px);
-  }
-  75% {
-    clip: rect(111px, 350px, 113px, 30px);
-  }
-  80% {
-    clip: rect(143px, 350px, 34px, 30px);
-  }
-  85% {
-    clip: rect(88px, 350px, 92px, 30px);
-  }
-  90% {
-    clip: rect(148px, 350px, 34px, 30px);
-  }
-  95% {
-    clip: rect(94px, 350px, 114px, 30px);
+  96% {
+    content: "Developer... And everything that comes with it :)";
   }
   100% {
-    clip: rect(72px, 350px, 118px, 30px);
+    content: "Developer... And everything that comes with it :)";
   }
 }
 
-@keyframes glitch-animation-2 {
-  0% {
-    clip: rect(101px, 350px, 4px, 30px);
-  }
-  5% {
-    clip: rect(147px, 350px, 91px, 30px);
-  }
-  10% {
-    clip: rect(82px, 350px, 21px, 30px);
-  }
-  15% {
-    clip: rect(54px, 350px, 86px, 30px);
-  }
-  20% {
-    clip: rect(96px, 350px, 6px, 30px);
-  }
-  25% {
-    clip: rect(57px, 350px, 148px, 30px);
-  }
-  30% {
-    clip: rect(64px, 350px, 121px, 30px);
-  }
-  35% {
-    clip: rect(144px, 350px, 44px, 30px);
-  }
-  40% {
-    clip: rect(3px, 350px, 105px, 30px);
-  }
-  45% {
-    clip: rect(109px, 350px, 107px, 30px);
-  }
-  50% {
-    clip: rect(90px, 350px, 116px, 30px);
-  }
-  55% {
-    clip: rect(48px, 350px, 105px, 30px);
-  }
-  60% {
-    clip: rect(82px, 350px, 134px, 30px);
-  }
-  65% {
-    clip: rect(76px, 350px, 60px, 30px);
-  }
-  70% {
-    clip: rect(44px, 350px, 37px, 30px);
-  }
-  75% {
-    clip: rect(84px, 350px, 59px, 30px);
-  }
-  80% {
-    clip: rect(128px, 350px, 99px, 30px);
-  }
-  85% {
-    clip: rect(20px, 350px, 79px, 30px);
-  }
-  90% {
-    clip: rect(73px, 350px, 98px, 30px);
-  }
-  95% {
-    clip: rect(123px, 350px, 27px, 30px);
-  }
-  100% {
-    clip: rect(143px, 350px, 134px, 30px);
+@media (min-width: 900px) {
+  .center {
+    flex-direction: row;
+
+    span {
+      margin-right: 8px;
+    }
   }
 }
