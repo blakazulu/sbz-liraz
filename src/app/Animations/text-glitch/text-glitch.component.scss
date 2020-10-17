@@ -14,6 +14,7 @@ $glitch-bg-color: transparent;
 span {
   font-family: 'Indie Flower', cursive;
   font-size: 1em;
+  color: white;
 }
 
 .glitch {
@@ -38,7 +39,7 @@ span {
   animation-name: glitch-animation;
   animation-duration: 4s;
   left: 0;
-  text-shadow: -1px 0 #ffa800;
+  text-shadow: -1px 0 #414a42;
   background: $glitch-bg-color;
 }
 
@@ -46,7 +47,7 @@ span {
   animation-name: glitch-animation-2;
   animation-duration: 6s;
   left: 0;
-  text-shadow: 1px 0 #2fff00;
+  text-shadow: 1px 0 #000000;
   background: $glitch-bg-color;
 }
 
@@ -194,6 +195,7 @@ p {
   height: 50%;
   font-family: 'Indie Flower', cursive;
   font-size: 2em;
+  color: white;
 }
 
 p:after {

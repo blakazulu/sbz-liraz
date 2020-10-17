@@ -164,11 +164,11 @@
 /* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to {
-    border-width: 5px;
+    border-width: 10px;
     border-color: transparent
   }
   50% {
-    border-width: 5px;
+    border-width: 10px;
     border-color: #3f3;
   }
 }
