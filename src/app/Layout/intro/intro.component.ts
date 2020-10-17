@@ -1,4 +1,14 @@
-import {ChangeDetectionStrategy, Component, ElementRef, OnInit, QueryList, Renderer2, ViewChildren, ViewEncapsulation} from '@angular/core';
+import {
+  AfterViewInit,
+  ChangeDetectionStrategy,
+  Component,
+  ElementRef,
+  OnInit,
+  QueryList,
+  Renderer2,
+  ViewChildren,
+  ViewEncapsulation
+} from '@angular/core';
 import {faFacebook, faGithub, faLinkedin, faStackOverflow} from '@fortawesome/free-brands-svg-icons';
 
 @Component({
@@ -8,7 +18,7 @@ import {faFacebook, faGithub, faLinkedin, faStackOverflow} from '@fortawesome/fr
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None
 })
-export class IntroComponent implements OnInit {
+export class IntroComponent implements OnInit, AfterViewInit {
   @ViewChildren('styleDiv', {read: ElementRef}) children: QueryList<ElementRef>;
 
   faLinkedin = faLinkedin;
@@ -20,10 +30,15 @@ export class IntroComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  ngAfterViewInit(): void {
     this.animateBackground();
   }
 
   private animateBackground(): void {
+    const renderer = this.renderer;
+    const children = this.children;
     const host = this.host;
     const chars = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
       'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
@@ -34,13 +49,13 @@ export class IntroComponent implements OnInit {
         const duration = Math.floor(Math.random() * 15);
         const offset = Math.floor(Math.random() * (45 - duration * 3)) + 3;
         const size = 12 + (15 - duration);
-        const span = '<span class="animated-text" style="right:' + offset + 'vw; font-size: ' + size + 'px; animation-duration:' + duration + 's">' + character + '</span>';
+        const span = '<span class="animated-text" style="right:' + offset + 'vw; font-size: ' +
+          +size + 'px; animation-duration:' + duration + 's">' + character + '</span>';
         this.children.first.nativeElement.insertAdjacentHTML('beforeend', span);
-        // this.styleDiv.nativeElement.insertAdjacentHTML('beforeend', span);
         setTimeout(() => {
-          // this.renderer.removeChild(host.nativeElement, this.children.first.nativeElement);
-        }, duration * 1000, false, host);
+          // renderer.removeChild(children.first.nativeElement.parentNode, children.first.nativeElement);
+        }, duration * 1000, false, host, children, renderer);
       }
-    }, 250, host);
+    }, 250, host, children, renderer);
   }
 }
