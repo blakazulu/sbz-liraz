@@ -15,6 +15,10 @@ span {
   font-family: 'Indie Flower', cursive;
   font-size: 1em;
   color: white;
+
+  &.name-color {
+    color: #8BD8E6;
+  }
 }
 
 .glitch {
