@@ -9,16 +9,23 @@
   justify-content: center;
 }
 
-.pacific-blue {
-  background: #17B0CC;
+.royal-blue-gradient {
+  background: rgb(139, 180, 242);
+  background: linear-gradient(41deg, rgba(139, 180, 242, 1) 0%,
+    rgba(104, 157, 238, 1) 33%, rgba(69, 134, 234, 1) 66%, rgba(51, 123, 232, 1) 100%);
 }
 
-.cinnabar {
+.turquoise-blue {
+  background: #47e3ff;
+}
+
+.tomato {
   background: #e84f33;
-  box-shadow: inset 0 0 0 100vw rgba(0, 0, 0, 0.5);
-
 }
 
+.mainBlue {
+  color: #337be8;
+}
 
 @media (min-width: 900px) {
   .page {

@@ -4,14 +4,13 @@ import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
   selector: 'sbz-resume',
   templateUrl: './resume.component.html',
   styleUrls: ['./resume.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+
 })
 export class ResumeComponent implements OnInit {
-
   constructor() {
   }
 
   ngOnInit(): void {
   }
-
 }
