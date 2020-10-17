@@ -3,15 +3,15 @@ import {NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {IntroComponent} from './Layout/intro/intro.component';
-import {BioComponent} from './Layout/bio/bio.component';
-import {ResumeComponent} from './Layout/resume/resume.component';
-import {SkillsComponent} from './Layout/skills/skills.component';
-import {PortfolioComponent} from './Layout/portfolio/portfolio.component';
-import {ContactComponent} from './Layout/contact/contact.component';
-import {TextGlitchComponent} from './Animations/text-glitch/text-glitch.component';
+import {IntroComponent} from './layout/intro/intro.component';
+import {BioComponent} from './layout/bio/bio.component';
+import {ResumeComponent} from './layout/resume/resume.component';
+import {SkillsComponent} from './layout/skills/skills.component';
+import {PortfolioComponent} from './layout/portfolio/portfolio.component';
+import {ContactComponent} from './layout/contact/contact.component';
+import {TextGlitchComponent} from './animations/text-glitch/text-glitch.component';
 import {MakeObservablePipe} from './pipes/make-observable.pipe';
-import {ShatterComponent} from './Animations/shatter/shatter.component';
+import {ShatterComponent} from './animations/shatter/shatter.component';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 
 @NgModule({
