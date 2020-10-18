@@ -58,7 +58,7 @@ export class IntroComponent implements OnInit, AfterViewInit {
         const character = chars[Math.floor(Math.random() * chars.length)];
         const duration = Math.floor(Math.random() * 15);
         const offset = Math.floor(Math.random() * (45 - duration * 3)) + 3;
-        const size = 12 + (15 - duration);
+        const size = 12 + (20 - duration);
         const color = colorArray[Math.floor(Math.random() * colorArray.length)];
         const span = `<span class="animated-text" style="color: ${color};right: ${offset}vw; font-size: ${size}px;` +
           ` animation-duration: ${duration}s">${character}</span>`;
