@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'sbz-root',
@@ -6,5 +6,10 @@ import {ChangeDetectionStrategy, Component} from '@angular/core';
   styleUrls: ['./app.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  // constructor(private observer: BreakpointObserver) {
+  // }
+
+  ngOnInit(): void {
+  }
 }

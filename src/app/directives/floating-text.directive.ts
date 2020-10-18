@@ -6,6 +6,7 @@ import {AfterViewInit, Directive, ElementRef, Input, Renderer2} from '@angular/c
 export class FloatingTextDirective implements AfterViewInit {
   @Input() maxFontSize = 20;
   @Input() colorSchemeArray: string[];
+  @Input() position: 'left' | 'right' = 'right';
 
   constructor(private elementRef: ElementRef, private renderer: Renderer2) {
   }
@@ -78,7 +79,7 @@ export class FloatingTextDirective implements AfterViewInit {
         const offset = Math.floor(Math.random() * (45 - duration * 3)) + 3;
         const size = 12 + (this.maxFontSize - duration);
         const color = this.colorSchemeArray[Math.floor(Math.random() * this.colorSchemeArray.length)];
-        const span = `<span class="animated-text" style="color: ${color};right: ${offset}vw; font-size: ${size}px;` +
+        const span = `<span class="animated-text" style="color: ${color};${this.position}: ${offset}vw; font-size: ${size}px;` +
           ` animation-duration: ${duration}s">${character}</span>`;
         elementRef.nativeElement.insertAdjacentHTML('beforeend', span);
         setTimeout(() => {
