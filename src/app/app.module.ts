@@ -13,6 +13,7 @@ import {TextGlitchComponent} from './animations/text-glitch/text-glitch.componen
 import {MakeObservablePipe} from './pipes/make-observable.pipe';
 import {ShatterComponent} from './animations/shatter/shatter.component';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import {FloatingTextDirective} from './directives/floating-text.directive';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
     ContactComponent,
     TextGlitchComponent,
     MakeObservablePipe,
-    ShatterComponent
+    ShatterComponent,
+    FloatingTextDirective
   ],
   imports: [
     BrowserModule,
