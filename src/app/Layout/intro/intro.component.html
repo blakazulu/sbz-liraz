@@ -1,11 +1,11 @@
 <section (intersectionChanged)="intersectionChanged($event)"
          [intersectionObserverInit]="intersectOptions"
-         [waitBeforeReportingIntersection]="700"
+         [waitBeforeReportingIntersection]="0"
          class="container"
          libNgIntersection>
   <ng-container *ngIf="isVisible">
     <sbz-text-glitch></sbz-text-glitch>
-    <div class="typewriter-container">
+    <div [@zoomInDownOnEnter] class="typewriter-container">
       <div class="typewriter">
         <h5>#front-end #angular #android #ios</h5>
       </div>

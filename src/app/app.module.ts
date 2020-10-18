@@ -16,6 +16,7 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {FloatingTextDirective} from './directives/floating-text.directive';
 import {LayoutModule} from '@angular/cdk/layout';
 import {NgIntersectionModule} from 'ng-intersection';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import {NgIntersectionModule} from 'ng-intersection';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     FontAwesomeModule,
     LayoutModule,
     NgIntersectionModule
