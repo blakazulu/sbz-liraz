@@ -14,6 +14,7 @@ import {MakeObservablePipe} from './pipes/make-observable.pipe';
 import {ShatterComponent} from './animations/shatter/shatter.component';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {FloatingTextDirective} from './directives/floating-text.directive';
+import {LayoutModule} from '@angular/cdk/layout';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import {FloatingTextDirective} from './directives/floating-text.directive';
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,6 @@
-import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit} from '@angular/core';
+import {BreakpointObserver} from '@angular/cdk/layout';
+import {Observable, of} from 'rxjs';
 
 @Component({
   selector: 'sbz-root',
@@ -7,9 +9,15 @@ import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent implements OnInit {
-  // constructor(private observer: BreakpointObserver) {
-  // }
+  public isMobile$: Observable<boolean>;
+
+  constructor(private observer: BreakpointObserver, private cdRef: ChangeDetectorRef) {
+  }
 
   ngOnInit(): void {
+    this.observer.observe('(min-width: 767px)').subscribe((result) => {
+      this.isMobile$ = of(result.matches);
+      this.cdRef.markForCheck();
+    });
   }
 }
