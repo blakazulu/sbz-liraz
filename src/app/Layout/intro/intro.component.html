@@ -1,33 +1,41 @@
-<section class="container">
-  <sbz-text-glitch></sbz-text-glitch>
-  <div class="typewriter-container">
-    <div class="typewriter">
-      <h5>#front-end #angular #android #ios</h5>
+<section (intersectionChanged)="intersectionChanged($event)"
+         [intersectionObserverInit]="intersectOptions"
+         [waitBeforeReportingIntersection]="700"
+         class="container"
+         libNgIntersection>
+  <ng-container *ngIf="isVisible">
+    <sbz-text-glitch></sbz-text-glitch>
+    <div class="typewriter-container">
+      <div class="typewriter">
+        <h5>#front-end #angular #android #ios</h5>
+      </div>
     </div>
-  </div>
-  <ul class="container__social-icons">
-    <li class="linkedin">
-      <a href="https://www.linkedin.com/in/liraz-amir-6ab470151/" rel="noopener" target="_blank">
-        <fa-icon [icon]="faLinkedin" title="Linkedin profile"></fa-icon>
-      </a>
-    </li>
-    <li class="github">
-      <a href="https://github.com/blakazulu" rel="noopener" target="_blank">
-        <fa-icon [icon]="faGithub" title="Github account"></fa-icon>
-      </a>
-    </li>
-    <li class="stack">
-      <a href="https://stackoverflow.com/users/5540292/liraz-shaka-amir" rel="noopener" target="_blank">
-        <fa-icon [icon]="faStackOverflow" title="Stack-overflow profile"></fa-icon>
-      </a>
-    </li>
-    <li class="facebook">
-      <a href="https://www.facebook.com/ShakaBlakaZulu" rel="noopener" target="_blank">
-        <fa-icon [icon]="faFacebook" title="Facebook profile"></fa-icon>
-      </a>
-    </li>
-  </ul>
+    <ul class="container__social-icons">
+      <li class="linkedin">
+        <a href="https://www.linkedin.com/in/liraz-amir-6ab470151/" rel="noopener" target="_blank">
+          <fa-icon [icon]="faLinkedin" title="Linkedin profile"></fa-icon>
+        </a>
+      </li>
+      <li class="github">
+        <a href="https://github.com/blakazulu" rel="noopener" target="_blank">
+          <fa-icon [icon]="faGithub" title="Github account"></fa-icon>
+        </a>
+      </li>
+      <li class="stack">
+        <a href="https://stackoverflow.com/users/5540292/liraz-shaka-amir" rel="noopener" target="_blank">
+          <fa-icon [icon]="faStackOverflow" title="Stack-overflow profile"></fa-icon>
+        </a>
+      </li>
+      <li class="facebook">
+        <a href="https://www.facebook.com/ShakaBlakaZulu" rel="noopener" target="_blank">
+          <fa-icon [icon]="faFacebook" title="Facebook profile"></fa-icon>
+        </a>
+      </li>
+    </ul>
+  </ng-container>
 </section>
 
-<div [position]="'right'" sbzFloatingText></div>
-<div [position]="'left'" sbzFloatingText></div>
+<ng-container *ngIf="isMobile$ | async">
+  <div [position]="'right'" sbzFloatingText></div>
+  <div [position]="'left'" sbzFloatingText></div>
+</ng-container>
