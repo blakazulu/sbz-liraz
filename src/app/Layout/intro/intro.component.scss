@@ -19,7 +19,6 @@
     justify-content: space-between;
 
     li {
-      border: 1px solid white;
       width: 100px;
       height: 100px;
       display: flex;
@@ -213,12 +212,18 @@
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1024px) {
   .container {
     width: auto;
-  }
 
-  .typewriter-container {
-    font-size: 1.5em;
+    &__social-icons {
+      li {
+        border: 1px solid white;
+      }
+    }
+
+    .typewriter-container {
+      font-size: 1.5em;
+    }
   }
 }
