@@ -59,7 +59,8 @@ export class FloatingTextDirective implements AfterViewInit {
         '#1bede6', '#8798a4', '#d7790f', '#b2c24f', '#de73c2', '#d70a9c', '#25b67',
         '#88e9b8', '#c2b0e2', '#86e98f', '#ae90e2', '#1a806b', '#436a9e', '#0ec0ff',
         '#f812b3', '#b17fc9', '#8d6c2f', '#d3277a', '#2ca1ae', '#9685eb', '#8a96c6',
-        '#dba2e6', '#76fc1b', '#608fa4', '#20f6ba', '#07d7f6', '#dce77a', '#77ecca'
+        '#dba2e6', '#76fc1b', '#608fa4', '#20f6ba', '#07d7f6', '#dce77a', '#77ecca',
+        '#000000', '#ffffff'
       ];
   }
 
@@ -68,20 +69,26 @@ export class FloatingTextDirective implements AfterViewInit {
     const renderer = this.renderer;
     const elementRef = this.elementRef;
 
-    const chars = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
-      'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
-      '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+    const chars = [...Array(26)].map((e, i) => (i + 10).toString(36));
 
     setInterval(() => {
       for (let i = 0; i < Math.floor(Math.random() * 5); i++) {
-        const character = chars[Math.floor(Math.random() * chars.length)];
         const duration = Math.floor(Math.random() * 15);
         const offset = Math.floor(Math.random() * (45 - duration * 3)) + 3;
         const size = 12 + (this.maxFontSize - duration);
         const color = this.colorSchemeArray[Math.floor(Math.random() * this.colorSchemeArray.length)];
-        const span = `<span class="animated-text" style="color: ${color};${this.position}: ${offset}vw; font-size: ${size}px;` +
-          ` animation-duration: ${duration}s">${character}</span>`;
-        elementRef.nativeElement.insertAdjacentHTML('beforeend', span);
+
+        const span = renderer.createElement('span');
+        span.innerText = chars[Math.floor(Math.random() * chars.length)];
+        renderer.addClass(span, 'animated-text');
+
+        renderer.setStyle(span, 'color', color);
+        renderer.setStyle(span, this.position, `${offset}vw`);
+        renderer.setStyle(span, 'font-size', `${size}px`);
+        renderer.setStyle(span, 'animation-duration', `${duration}s`);
+        renderer.setStyle(span, 'color', color);
+
+        renderer.appendChild(elementRef.nativeElement, span);
         setTimeout(() => {
           renderer.removeChild(elementRef.nativeElement, elementRef.nativeElement.firstChild);
         }, duration * 1000, false, elementRef, renderer);

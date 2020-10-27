@@ -24,7 +24,7 @@ span {
 
 .glitch {
   position: relative;
-  margin: 0 auto;
+  //margin: 0 auto;
   background: $glitch-bg-color;
 }
 
@@ -414,7 +414,7 @@ p:after {
     }
   }
   span {
-    font-size: 1.5em;
+    font-size: 1.5vw;
   }
   p {
     font-size: 3em;

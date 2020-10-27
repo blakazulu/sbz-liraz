@@ -38,7 +38,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     FontAwesomeModule,
     LayoutModule,
-    NgIntersectionModule
+    NgIntersectionModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
