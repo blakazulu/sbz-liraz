@@ -1,12 +1,12 @@
 <!--<router-outlet></router-outlet>-->
 <sbz-intro class="page"></sbz-intro>
-<sbz-bio class="page"></sbz-bio>
-<sbz-resume class="page"></sbz-resume>
-<sbz-skills class="page"></sbz-skills>
-<sbz-portfolio class="page"></sbz-portfolio>
-<sbz-contact class="page"></sbz-contact>
+<!--<sbz-bio class="page"></sbz-bio>-->
+<!--<sbz-resume class="page"></sbz-resume>-->
+<!--<sbz-skills class="page"></sbz-skills>-->
+<!--<sbz-portfolio class="page"></sbz-portfolio>-->
+<!--<sbz-contact class="page"></sbz-contact>-->
 
-<ng-container *ngIf="isMobile$ | async">
-  <div [position]="'right'" sbzFloatingText></div>
-  <div [position]="'left'" sbzFloatingText></div>
+<ng-container *ngIf="notMobile$ | async">
+  <div [position]="'right'" sbzTextAnimation></div>
+  <div [position]="'left'" sbzTextAnimation></div>
 </ng-container>

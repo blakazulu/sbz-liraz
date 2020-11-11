@@ -1,9 +1,18 @@
-<section>
-  <h2 [@zoomInLeftOnEnter] class="center">
-    <span class="glitch" data-text="help•">hello,</span>
-    <span>my name is</span>
-    <span class="name-color">Liraz Amir</span>
-    <span>and i'm a</span>
-  </h2>
-  <p [@zoomInRightOnEnter]></p>
+<section class="glitch-container">
+  <div class="title-container">
+    <p class="glitch" data-text="help•">hello,</p>
+    <div class="intro-title">
+      <p>my name is</p>
+      <p class="name-color">Liraz Amir</p>
+      <p>and i'm a</p>
+    </div>
+  </div>
+  <ngx-sbz-type-delete
+    [blinkWidth]="'10px'"
+    [fontSize]="typeDeleteFontSize | async"
+    [textColor]="'white'"
+    [wordArray]="['Developer...', 'And everything', 'that comes with it']"
+    class="typewriter">
+  </ngx-sbz-type-delete>
 </section>
+

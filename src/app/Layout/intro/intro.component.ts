@@ -1,6 +1,6 @@
-import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
-import {faFacebook, faGithub, faLinkedin, faStackOverflow} from '@fortawesome/free-brands-svg-icons';
-import {Observable} from 'rxjs';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import {faFacebook, faGithub, faLinkedin, faMedium, faNpm, faStackOverflow} from '@fortawesome/free-brands-svg-icons';
+import {faFilePdf, faFileWord} from '@fortawesome/free-regular-svg-icons';
 import {zoomInDownOnEnterAnimation} from 'angular-animations';
 
 @Component({
@@ -13,11 +13,15 @@ import {zoomInDownOnEnterAnimation} from 'angular-animations';
   ]
 })
 export class IntroComponent implements OnInit {
-  @Input() isMobile$: Observable<boolean>;
   faLinkedin = faLinkedin;
   faGithub = faGithub;
   faStackOverflow = faStackOverflow;
   faFacebook = faFacebook;
+  faNpm = faNpm;
+  faMedium = faMedium;
+  faFileWord = faFileWord;
+  faFilePdf = faFilePdf;
+
   public intersectOptions = {rootMargin: '0px', threshold: 0};
   public isVisible: boolean;
 

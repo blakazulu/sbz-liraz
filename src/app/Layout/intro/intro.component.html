@@ -5,7 +5,7 @@
          libNgIntersection>
   <ng-container *ngIf="isVisible">
     <sbz-text-glitch></sbz-text-glitch>
-    <div [@zoomInDownOnEnter] class="typewriter-container">
+    <div class="typewriter-container">
       <div class="typewriter">
         <h5>#front-end #angular #android #ios</h5>
       </div>
@@ -31,6 +31,31 @@
       <li class="rotate">
         <a class="rotate facebook" href="https://www.facebook.com/ShakaBlakaZulu" rel="noopener" target="_blank">
           <fa-icon [icon]="faFacebook" title="Facebook profile"></fa-icon>
+        </a>
+      </li>
+    </ul>
+    <ul class="container__social-icons second-line">
+      <li class="rotate">
+        <a class="rotate npm" href="https://www.npmjs.com/settings/liraz-sbz/packages" rel="noopener"
+           target="_blank">
+          <fa-icon [icon]="faNpm" title="Npm profile"></fa-icon>
+        </a>
+      </li>
+      <li class="rotate">
+        <a class="rotate medium" href="https://liraz-amir.medium.com/" rel="noopener" target="_blank">
+          <fa-icon [icon]="faMedium" title="Medium account"></fa-icon>
+        </a>
+      </li>
+      <li class="rotate">
+        <a class="rotate word" href="assets/cv/liraz_amir_cv.doc" rel="noopener"
+           target="_blank">
+          <fa-icon [icon]="faFileWord" title="CV Word"></fa-icon>
+        </a>
+      </li>
+      <li class="rotate">
+        <a class="rotate pdf" href="assets/cv/liraz_amir_cv.pdf" rel="noopener"
+           target="_blank">
+          <fa-icon [icon]="faFilePdf" title="CV PDF"></fa-icon>
         </a>
       </li>
     </ul>

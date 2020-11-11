@@ -1,5 +1,7 @@
-import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {zoomInLeftOnEnterAnimation, zoomInRightOnEnterAnimation} from 'angular-animations';
+import {Observable, of} from 'rxjs';
+import {BreakpointObserver} from '@angular/cdk/layout';
 
 @Component({
   selector: 'sbz-text-glitch',
@@ -12,10 +14,16 @@ import {zoomInLeftOnEnterAnimation, zoomInRightOnEnterAnimation} from 'angular-a
   ]
 })
 export class TextGlitchComponent implements OnInit {
-  constructor() {
+  public typeDeleteFontSize: Observable<string>;
+
+  constructor(private observer: BreakpointObserver, private cdRef: ChangeDetectorRef) {
   }
 
   ngOnInit(): void {
+    this.observer.observe('(max-width: 767px)')
+      .subscribe((result) => {
+        this.typeDeleteFontSize = result.matches ? of('30px') : of('4vw');
+        this.cdRef.markForCheck();
+      });
   }
-
 }

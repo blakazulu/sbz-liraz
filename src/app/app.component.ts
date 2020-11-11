@@ -9,15 +9,16 @@ import {Observable, of} from 'rxjs';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent implements OnInit {
-  public isMobile$: Observable<boolean>;
+  public notMobile$: Observable<boolean>;
 
   constructor(private observer: BreakpointObserver, private cdRef: ChangeDetectorRef) {
   }
 
   ngOnInit(): void {
-    this.observer.observe('(min-width: 767px)').subscribe((result) => {
-      this.isMobile$ = of(result.matches);
-      this.cdRef.markForCheck();
-    });
+    this.observer.observe('(min-width: 767px)')
+      .subscribe((result) => {
+        this.notMobile$ = of(result.matches);
+        this.cdRef.markForCheck();
+      });
   }
 }
