@@ -10,13 +10,13 @@ html {
 
 body {
   margin: 0;
-
+  height: 100vh;
   /* fallback for old browsers */
   background: #090e40;
 
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background-image: linear-gradient(to top, #090e40, #192261, #293684, #364da9, #4265d0);
+  background-image: linear-gradient(90deg, #090e40, #192261, #293684, #364da9, #4265d0);
 
   /* Chrome 10-25, Safari 5.1-6 */
-  background-image: -webkit-linear-gradient(to top, #090e40, #192261, #293684, #364da9, #4265d0);
+  background-image: -webkit-linear-gradient(90deg, #090e40, #192261, #293684, #364da9, #4265d0);
 }
