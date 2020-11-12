@@ -6,7 +6,10 @@
 <!--<sbz-portfolio class="page"></sbz-portfolio>-->
 <!--<sbz-contact class="page"></sbz-contact>-->
 
-<ng-container *ngIf="notMobile$ | async">
+<ng-container *ngIf="notMobile$ | async; else mobile">
   <div [position]="'right'" sbzTextAnimation></div>
   <div [position]="'left'" sbzTextAnimation></div>
 </ng-container>
+<ng-template #mobile>
+  <div percentOfScreen="100" sbzTextAnimation></div>
+</ng-template>

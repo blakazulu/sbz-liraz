@@ -25,7 +25,7 @@
     "angular-animations": "^0.11.0",
     "compass-mixins": "^0.12.10",
     "ng-intersection": "^1.0.1",
-    "ngx-sbz-text-animation": "^1.0.6",
+    "ngx-sbz-text-animation": "^2.0.1",
     "ngx-sbz-type-delete": "^2.0.3",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
