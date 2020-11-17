@@ -1,0 +1,378 @@
+@import '~compass-mixins/lib/compass/reset-legacy';
+$base: 1vw;
+
+$background-color: #2196F3;
+$digital-color: white;
+$digital-d-color: #ffac24;
+$digital-i-color: #ffac24;
+$digital-g-color: #ffac24;
+$digital-i2-color: #ffac24;
+$digital-t-color: #ffac24;
+$digital-a-color: #ffac24;
+$digital-l-color: #ffac24;
+
+
+.background {
+  //background-image: linear-gradient(to bottom, $background-color, darken($background-color, 50%));
+  //background-color: $background-color;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.digital {
+  position: absolute;
+  height: 5*$base;
+  width: 32*$base;
+  left: calc(50% - #{$base*15.5});
+  top: calc(50% - #{$base*2.5});
+
+  .lettre {
+    position: absolute;
+    height: 5*$base;
+    width: 4*$base;
+
+    .big-square {
+      position: relative;
+      transform: scale(0.75);
+      height: 1*$base;
+      width: 1*$base;
+
+      .little-square {
+        background-color: $digital-color;
+        position: relative;
+        height: 0.5*$base;
+        width: 0.5*$base;
+      }
+
+      .little-square.little-square-3,
+      .little-square.little-square-4 {
+        top: -1*$base;
+        left: 0.5*$base;
+      }
+    }
+  }
+}
+
+/* POSITIONNEMENT =============================== */
+.lettre-D {
+  .big-square-6 {
+    top: -1*$base;
+    left: +1*$base;
+  }
+
+  .big-square-7 {
+    top: -2*$base;
+    left: +2*$base;
+  }
+
+  .big-square-8 {
+    top: -4*$base;
+    left: +3*$base;
+  }
+
+  .big-square-9 {
+    top: -6*$base;
+    left: +3*$base;
+  }
+
+  .big-square-10 {
+    top: -8*$base;
+    left: +3*$base;
+  }
+
+  .big-square-11 {
+    top: -10*$base;
+    left: +2*$base;
+  }
+
+  .big-square-12 {
+    top: -11*$base;
+    left: +1*$base;
+  }
+}
+
+.lettre-I {
+  left: 5*$base;
+
+  .big-square-1, .big-square-2,
+  .big-square-3, .big-square-4,
+  .big-square-5 {
+    left: 1*$base;
+  }
+
+  .big-square-6 {
+    top: -1*$base;
+  }
+
+  .big-square-7 {
+    top: -2*$base;
+    left: +2*$base;
+  }
+
+  .big-square-8 {
+    top: -7*$base;
+  }
+
+  .big-square-9 {
+    top: -8*$base;
+    left: +2*$base;
+  }
+}
+
+.lettre-G {
+  left: 9*$base;
+
+  .big-square-1 {
+    left: 1*$base;
+  }
+
+  .big-square-5 {
+    left: 1*$base;
+  }
+
+  .big-square-6 {
+    top: -1*$base;
+    left: +2*$base;
+  }
+
+  .big-square-7 {
+    top: -3*$base;
+    left: +3*$base;
+  }
+
+  .big-square-8 {
+    top: -5*$base;
+    left: +3*$base;
+  }
+
+  .big-square-9 {
+    top: -6*$base;
+    left: +2*$base;
+  }
+
+  .big-square-10 {
+    top: -9*$base;
+    left: +2*$base;
+  }
+
+  .big-square-11 {
+    top: -10*$base;
+    left: +3*$base;
+  }
+}
+
+.lettre-I.bis {
+  left: 14*$base;
+}
+
+.lettre-T {
+  left: 18*$base;
+
+  .big-square-2, .big-square-3,
+  .big-square-4, .big-square-5 {
+    left: +1.5*$base;
+  }
+
+  .big-square-6 {
+    top: -5*$base;
+    left: +1*$base;
+  }
+
+  .big-square-7 {
+    top: -6*$base;
+    left: +2*$base;
+  }
+
+  .big-square-8 {
+    top: -7*$base;
+    left: +3*$base;
+  }
+}
+
+.lettre-A {
+  left: 22.5*$base;
+
+  .big-square-1 {
+    left: 1*$base;
+  }
+
+  .big-square-6 {
+    top: -3*$base;
+    left: +1*$base;
+  }
+
+  .big-square-7 {
+    top: -4*$base;
+    left: +2*$base;
+  }
+
+  .big-square-8 {
+    top: -3*$base;
+    left: +3*$base;
+  }
+
+  .big-square-9 {
+    top: -5*$base;
+    left: +3*$base;
+  }
+
+  .big-square-10 {
+    top: -7*$base;
+    left: +3*$base;
+  }
+
+  .big-square-11 {
+    top: -9*$base;
+    left: +3*$base;
+  }
+
+  .big-square-12 {
+    top: -11*$base;
+    left: +2*$base;
+  }
+}
+
+.lettre-L {
+  left: 27.5*$base;
+
+  .big-square-1,
+  .big-square-2,
+  .big-square-3,
+  .big-square-4,
+  .big-square-5 {
+  }
+
+  .big-square-6 {
+    top: -1*$base;
+    left: +1*$base;
+  }
+
+  .big-square-7 {
+    top: -2*$base;
+    left: +2*$base;
+  }
+
+  .big-square-8 {
+    top: -3*$base;
+    left: +3*$base;
+  }
+}
+
+
+/* ANIMATION ====================================================== */
+.big-square,
+.little-square {
+  transition: 1.5s cubic-bezier(.17, .67, 0, 1.34);
+}
+
+.lettre:hover {
+  .little-square-1 {
+    transform: translate(-1*$base, -4*$base);
+  }
+
+  .little-square-2 {
+    transform: translate(-2*$base, +3*$base);
+  }
+
+  .little-square-3 {
+    transform: translate(+3*$base, -2*$base);
+  }
+
+  .little-square-4 {
+    transform: translate(+4*$base, +1*$base);
+  }
+
+  .big-square-1 {
+    transform: translate(random(20*$base)-10*$base, random(20*$base)-10*$base);
+  }
+
+  .big-square-2 {
+    transform: translate(random(20*$base)-10*$base, random(20*$base)-10*$base);
+  }
+
+  .big-square-3 {
+    transform: translate(random(20*$base)-10*$base, random(20*$base)-10*$base);
+  }
+
+  .big-square-4 {
+    transform: translate(random(20*$base)-10*$base, random(20*$base)-10*$base);
+  }
+
+  .big-square-5 {
+    transform: translate(random(20*$base)-10*$base, random(20*$base)-10*$base);
+  }
+
+  .big-square-6 {
+    transform: translate(random(20*$base)-10*$base, random(20*$base)-10*$base);
+  }
+
+  .big-square-7 {
+    transform: translate(random(20*$base)-10*$base, random(20*$base)-10*$base);
+  }
+
+  .big-square-8 {
+    transform: translate(random(20*$base)-10*$base, random(20*$base)-10*$base);
+  }
+
+  .big-square-9 {
+    transform: translate(random(20*$base)-10*$base, random(20*$base)-10*$base);
+  }
+
+  .big-square-10 {
+    transform: translate(random(20*$base)-10*$base, random(20*$base)-10*$base);
+  }
+
+  .big-square-11 {
+    transform: translate(random(20*$base)-10*$base, random(20*$base)-10*$base);
+  }
+
+  .big-square-12 {
+    transform: translate(random(20*$base)-10*$base, random(20*$base)-10*$base);
+  }
+}
+
+.lettre-D:hover {
+  .little-square {
+    background-color: $digital-d-color !important;
+  }
+}
+
+.lettre-I:hover {
+  .little-square {
+    background-color: $digital-i-color !important;
+  }
+}
+
+.lettre-G:hover {
+  .little-square {
+    background-color: $digital-g-color !important;
+  }
+}
+
+.lettre-I.bis:hover {
+  .little-square {
+    background-color: $digital-i2-color !important;
+  }
+}
+
+.lettre-T:hover {
+  .little-square {
+    background-color: $digital-t-color !important;
+  }
+}
+
+.lettre-A:hover {
+  .little-square {
+    background-color: $digital-a-color !important;
+  }
+}
+
+.lettre-L:hover {
+  .little-square {
+    background-color: $digital-l-color !important;
+  }
+}
