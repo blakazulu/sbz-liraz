@@ -1,9 +1,4 @@
-<section (intersectionChanged)="intersectionChanged($event)"
-         [intersectionObserverInit]="intersectOptions"
-         [waitBeforeReportingIntersection]="0"
-         class="container"
-         libNgIntersection>
-  <ng-container *ngIf="isVisible">
+<section class="container">
     <sbz-text-glitch></sbz-text-glitch>
     <div class="typewriter-container">
       <div class="typewriter">
@@ -13,7 +8,7 @@
     <ul class="container__social-icons ">
       <li class="rotate">
         <a class="rotate linkedin" href="https://www.linkedin.com/in/liraz-amir-6ab470151/" rel="noopener"
-           target="_blank">
+          target="_blank">
           <fa-icon [icon]="faLinkedin" title="Linkedin profile"></fa-icon>
         </a>
       </li>
@@ -24,7 +19,7 @@
       </li>
       <li class="rotate">
         <a class="rotate stack" href="https://stackoverflow.com/users/5540292/liraz-shaka-amir" rel="noopener"
-           target="_blank">
+          target="_blank">
           <fa-icon [icon]="faStackOverflow" title="Stack-overflow profile"></fa-icon>
         </a>
       </li>
@@ -36,8 +31,7 @@
     </ul>
     <ul class="container__social-icons second-line">
       <li class="rotate">
-        <a class="rotate npm" href="https://www.npmjs.com/~liraz-sbz" rel="noopener"
-           target="_blank">
+        <a class="rotate npm" href="https://www.npmjs.com/~liraz-sbz" rel="noopener" target="_blank">
           <fa-icon [icon]="faNpm" title="Npm profile"></fa-icon>
         </a>
       </li>
@@ -47,19 +41,16 @@
         </a>
       </li>
       <li class="rotate">
-        <a class="rotate word" href="assets/cv/liraz_amir_cv.doc" rel="noopener"
-           target="_blank">
+        <a class="rotate word" href="assets/cv/liraz_amir_cv.doc" rel="noopener" target="_blank">
           <fa-icon [icon]="faFileWord" title="CV Word"></fa-icon>
         </a>
       </li>
       <li class="rotate">
-        <a class="rotate pdf" href="assets/cv/liraz_amir_cv.pdf" rel="noopener"
-           target="_blank">
+        <a class="rotate pdf" href="assets/cv/liraz_amir_cv.pdf" rel="noopener" target="_blank">
           <fa-icon [icon]="faFilePdf" title="CV PDF"></fa-icon>
         </a>
       </li>
     </ul>
-  </ng-container>
 </section>
 
 <section class="image-container">

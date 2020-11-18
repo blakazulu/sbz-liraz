@@ -22,16 +22,9 @@ export class IntroComponent implements OnInit {
   faFileWord = faFileWord;
   faFilePdf = faFilePdf;
 
-  public intersectOptions = {rootMargin: '0px', threshold: 0};
-  public isVisible: boolean;
-
   constructor() {
   }
 
   ngOnInit(): void {
-  }
-
-  intersectionChanged(isVisible: boolean): void {
-    this.isVisible = isVisible;
   }
 }
