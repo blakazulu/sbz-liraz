@@ -14,7 +14,6 @@ import {MakeObservablePipe} from './pipes/make-observable.pipe';
 import {ShatterComponent} from './animations/shatter/shatter.component';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {LayoutModule} from '@angular/cdk/layout';
-import {NgIntersectionModule} from 'ng-intersection';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgxSbzTextAnimationModule} from 'ngx-sbz-text-animation';
 import {ExplodeComponent} from './animations/explode/explode.component';
@@ -40,7 +39,6 @@ import {InfiniteTypeDeleteModule} from 'ngx-sbz-type-delete';
     BrowserAnimationsModule,
     FontAwesomeModule,
     LayoutModule,
-    NgIntersectionModule,
     NgxSbzTextAnimationModule,
     InfiniteTypeDeleteModule,
   ],
